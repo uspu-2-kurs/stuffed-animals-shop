@@ -1,0 +1,11 @@
+;Production DB credentials
+prod-db-host=
+prod-db-user=
+prod-db-pass=
+prod-db-name=
+
+;UnitTest DB credentials
+test-db-host=
+test-db-user=
+test-db-pass=
+test-db-name=

@@ -1,0 +1,8 @@
+build/
+public/.htaccess
+configs/application.php
+build.properties
+vendor/
+var/*
+.idea/
+composer.phar

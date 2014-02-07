@@ -1,0 +1,15 @@
+{
+    "require": {
+        "twig/twig": "1.*",
+        "zendframework/zendframework1": "1.*",
+        "doctrine/orm": "*",
+        "doctrine/migrations": "1.0.*@dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*@dev",
+        "phpunit/dbunit": ">=1.2",
+        "phpunit/php-invoker": "*",
+        "phpunit/phpunit-selenium": ">=1.2",
+        "phpunit/phpunit-story": "*"
+    }
+}

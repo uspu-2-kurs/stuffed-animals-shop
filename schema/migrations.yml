@@ -1,0 +1,4 @@
+name: Bob's Guns Project Migrations
+migrations_namespace: Migrations
+table_name: migration_version
+migrations_directory: ./Migrations
