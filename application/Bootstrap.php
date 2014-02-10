@@ -34,4 +34,16 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         Model_Page::configureTwig($config);
     } // _initTwig
 
+
+    /**
+     * Инициализация обработки URL
+     *
+     * @return void
+     */
+    protected function _initRouter()
+    {
+        $config = Model_Router::getConfiguration();
+        $router = Zend_Controller_Front::getInstance()->getRouter();
+        Model_Router::buildRouters($config, $router);
+    } // _initRouter
 }
