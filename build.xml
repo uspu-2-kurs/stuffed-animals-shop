@@ -42,6 +42,14 @@
         </copy>
     </target>
 
+    <target name="build" description="Make build configurations">
+        <exec executable="chmod" dir="${basedir}" failonerror="true">
+            <arg value="oug+w"/>
+            <arg value="-R"/>
+            <arg value="var"/>
+        </exec>
+    </target>
+
     <target name="set-production-mode" description="Update .htaccess to production version">
         <copy file="${basedir}/public/.htaccess-prod" tofile="${basedir}/public/.htaccess" overwrite="Yes">
         </copy>

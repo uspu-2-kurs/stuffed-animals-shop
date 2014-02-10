@@ -24,4 +24,14 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
             'basePath' => APPLICATION_PATH
         ));
     } // _initAutoload
+
+    /**
+     * Initialize Twig
+     */
+    protected function _initTwig()
+    {
+        $config = $this->getOption('twig');
+        Model_Page::configureTwig($config);
+    } // _initTwig
+
 }

@@ -32,7 +32,21 @@ $config = array(
         ),
         'view' => '',
     ),
+    'twig' => array(
+        'templateDir' => APPLICATION_PATH . '/templates',
+        'options' => array(
+            'cache' => VAR_PATH . '/cache/twig',
+        ),
+    ),
 );
+
+if (defined('APPLICATION_ENV') && APPLICATION_ENV == 'development') {
+    $config['phpSettings']['display_startup_errors'] = 1;
+    $config['phpSettings']['display_errors'] = 1;
+
+    $config['twig']['options']['debug'] = true;
+    $config['twig']['options']['auto_reload'] = true;
+}
 
 if (defined('APPLICATION_ENV') && APPLICATION_ENV == 'testing') {
     $config['resource']['db']['params'] = array(
@@ -42,6 +56,13 @@ if (defined('APPLICATION_ENV') && APPLICATION_ENV == 'testing') {
         'dbname' => '@test-db-name@',
         'driver_options' => array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"),
     );
+
+    $config['phpSettings']['display_startup_errors'] = 1;
+    $config['phpSettings']['display_errors'] = 1;
+
+    $config['twig']['options']['debug'] = true;
+    $config['twig']['options']['auto_reload'] = true;
+    $config['twig']['options']['cache'] = false;
 }
 
 

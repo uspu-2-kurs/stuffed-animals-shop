@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Ошибка | Пушки от Боби</title>
+    </head>
+    <body>
+        {{ errorMessage }}
+        {% if (backTrace) %}
+            <pre>
+{{ backTrace }}
+            </pre>
+        {% endif %}
+    </body>
+</html>
