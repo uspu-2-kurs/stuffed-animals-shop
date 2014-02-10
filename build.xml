@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="guns" default="build">
+<project name="stuffed-animals-shop" default="build">
 
     <!-- Load build settings (db user, password, etc) -->
     <property file="build.properties" description="Build settings"/>
@@ -42,7 +42,7 @@
         </copy>
     </target>
 
-    <target name="build" description="Make build configurations">
+    <target name="build" depends="update-configs,composer,composer-install,set-production-mode" description="Make build configurations">
         <exec executable="chmod" dir="${basedir}" failonerror="true">
             <arg value="oug+w"/>
             <arg value="-R"/>
