@@ -25,25 +25,4 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         ));
     } // _initAutoload
 
-    /**
-     * Initialize Twig
-     */
-    protected function _initTwig()
-    {
-        $config = $this->getOption('twig');
-        Model_Page::configureTwig($config);
-    } // _initTwig
-
-
-    /**
-     * Инициализация обработки URL
-     *
-     * @return void
-     */
-    protected function _initRouter()
-    {
-        $config = Model_Router::getConfiguration();
-        $router = Zend_Controller_Front::getInstance()->getRouter();
-        Model_Router::buildRouters($config, $router);
-    } // _initRouter
 }
