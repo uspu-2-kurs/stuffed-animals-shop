@@ -9,8 +9,8 @@ use Doctrine\DBAL\Migrations\AbstractMigration,
 class Version20140211155200 extends AbstractMigration
 {
     /**
-* @param Schema $schema
-*/
+     * @param Schema $schema
+     */
     public function up(Schema $schema)
     {
         if (!$schema->hasTable('table_name')) {
@@ -26,8 +26,8 @@ SQL;
     }
 
     /**
-* @param Schema $schema
-*/
+     * @param Schema $schema
+     */
     public function down(Schema $schema)
     {
         if ($schema->hasTable('table_name')) {
