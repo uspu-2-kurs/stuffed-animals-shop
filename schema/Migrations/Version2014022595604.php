@@ -25,7 +25,7 @@ class Version2014022595604 extends AbstractMigration
         if (!$schema->hasTable('order')) {
             $sql = <<<SQL
 
-create table order (
+create table `order` (
 orderId int primary key auto_increment,
 address text,
 phone varchar (255),

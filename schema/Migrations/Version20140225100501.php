@@ -13,12 +13,9 @@ public function up(Schema $schema)
 {
 if (!$schema->hasTable('categories')) {
 $sql = <<<SQL
-    SQL код для создания таблицы
-   create table Задание01 (
-   itemId int Primary key auto_increment,
-   var char(225)
-   text
-   decimal(10,2)
+create table categories (
+   categoryId int Primary key auto_increment,
+   categoryName varchar(225)
    );
 SQL;
 $this->addSql($sql);
