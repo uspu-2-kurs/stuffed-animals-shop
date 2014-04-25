@@ -14,10 +14,14 @@ class Version20140211155200 extends AbstractMigration
      */
     public function up(Schema $schema)
     {
-        if (!$schema->hasTable('table_name')) {
+        if (!$schema->hasTable('order')) {
             $sql = <<<SQL
-CREATE TABLE categories (
-Описание полей
+CREATE TABLE order  (
+orderID int primary key autoincrement,
+phone varchar(255),
+address text,
+total decimal(10,2)
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 SQL;
             $this->addSql($sql);
@@ -31,8 +35,8 @@ SQL;
      */
     public function down(Schema $schema)
     {
-        if ($schema->hasTable('table_name')) {
-            $schema->dropTable('table_name');
+        if ($schema->hasTable('order')) {
+            $schema->dropTable('order');
         }
     }
 }
